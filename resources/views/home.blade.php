@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('resources/js/app.js')
-</head>
 
-<body>
-    <h1 class="text-danger">
-        CIAO
-    </h1>
+@section('title', 'home')
 
-</body>
 
-</html>
+@section('main-content')
+    <h1>Home</h1>
+    <section id="movies">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center">
+                @forelse ($movies as $movie)
+                    @include('includes.movies.card')
+                @empty
+                    <h2 class="text-center">NON CI SONO FILM A DISPOSIZIONE</h2>
+                @endforelse
+
+            </div>
+        </div>
+
+    </section>
+@endsection

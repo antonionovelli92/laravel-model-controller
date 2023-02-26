@@ -8,7 +8,7 @@
               <p class="card-text">{{ $movie['vote'] }}</p>
               <a href="{{ url("/movies/{$movie['id']}") }}" class="card-link">Scopri di più</a>
               {{-- seconda sintassi --}}
-              <a href="{{ route('movies.show'), $movie['id'] }}" class="card-link">Scopri di più</a>
+              {{-- <a href="{{ route('movies.show'), $movie['id'] }}" class="card-link">Scopri di più</a> --}}
 
           </div>
       </div>
